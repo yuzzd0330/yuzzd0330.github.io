@@ -78,6 +78,8 @@ def download(item):
     name, expected = item
     if name == "index.html":
         data = base64.b64decode(INDEX_DATA)
+    elif name == "assets/python-finance-1.html":
+        data = Path("migration/notebook-preview.html").read_bytes()
     else:
         request = Request(BASE + quote(name), headers={"User-Agent": "Portfolio-Migration/1.0"})
         with urlopen(request, timeout=120) as response:
