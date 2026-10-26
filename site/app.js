@@ -3,7 +3,7 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;',
 const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const CATEGORIES = ['全部项目','财务与商业分析','审计与舞弊识别','研究与数据分析'];
 const CATEGORY_COPY = {
- '全部项目':{eyebrow:'ACADEMIC WORK & PROFESSIONAL INTERESTS',lines:['收录本科阶段的毕业项目、企业咨询、科研与课程成果。','从财务与商业分析到舞弊识别，这些材料呈现我的研究方法与专业判断，也记录了沿着问题逐步深入的过程。']},
+ '全部项目':{eyebrow:'ACADEMIC WORK & PROFESSIONAL INTERESTS',lines:['收录本科与硕士阶段的毕业项目、企业咨询、科研与课程成果。','从财务与商业分析到舞弊识别，这些材料呈现我的研究方法与专业判断，也记录了沿着问题逐步深入的过程。']},
  '财务与商业分析':{eyebrow:'FINANCIAL & BUSINESS ANALYSIS',lines:['围绕企业经营、绩效管理与投资决策展开的分析项目。','结合财务报表、行业背景与制度环境，考察经营表现、资本配置与长期价值之间的联系。']},
  '审计与舞弊识别':{eyebrow:'AUDIT, EVIDENCE & ACCOUNTING FRAUD',lines:['以会计质量、舞弊风险与审计证据为核心的案例与研究。','从异常识别到事实核查，关注证据如何支持判断，以及结论应止于何处。']},
  '研究与数据分析':{eyebrow:'RESEARCH & DATA ANALYSIS',lines:['以数据处理、文献计量与可视化为方法的研究尝试。','保留从资料筛选到结果解释的完整过程，并审视方法选择、信息边界与分析局限。']}
@@ -15,7 +15,7 @@ function size(bytes){return bytes>=1048576?(bytes/1048576).toFixed(1)+' MB':Math
 function toast(message,stay=false){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').classList.add('visible');if(!stay)toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3500)}
 function renderNav(){
  $('.owner').classList.toggle('active',location.hash==='#about');
- const stageCount=$('.stage-count');if(stageCount)stageCount.textContent=PROJECTS.length;
+ const stageCount=$('.stage-count');if(stageCount)stageCount.textContent=PROJECTS.filter(p=>!p.stage?.startsWith('硕士')).length;
  $('#categories').innerHTML=CATEGORIES.map((c,i)=>`<button class="nav-item ${category===c&&location.hash!=='#about'?'active':''}" data-category="${c}" ${category===c?'aria-current="page"':''}>${icon(CAT_ICONS[i])}<span>${c}</span><span class="count">${c==='全部项目'?PROJECTS.length:PROJECTS.filter(p=>p.category===c).length}</span></button>`).join('');
  $('#categories').querySelectorAll('button').forEach(b=>b.onclick=()=>{category=b.dataset.category;query='';$('#search').value='';if(location.hash)location.hash='';else render();renderNav()});
 }
@@ -28,7 +28,7 @@ function render(){
  if(currentProject){renderDetail(currentProject);return}
  const list=PROJECTS.filter(matches);
  const copy=CATEGORY_COPY[category];
- $('#main').innerHTML=`<div class="intro"><div><div class="eyebrow">${copy.eyebrow}</div><h1>${category==='全部项目'?'项目档案':category}</h1><p>${copy.lines.map(line=>esc(line)).join('<br>')}</p></div><div class="archive-stamp">COLLECTION<strong>01—${String(PROJECTS.length).padStart(2,'0')}</strong>UNDERGRADUATE</div></div><div class="stats"><div class="stat"><div class="stat-icon">${icon('folder')}</div><div><strong>${PROJECTS.length}</strong><span>项目文件夹</span></div></div><div class="stat"><div class="stat-icon">${icon('file')}</div><div><strong>${PROJECTS.reduce((n,p)=>n+p.files.length,0)}</strong><span>原始材料</span></div></div><div class="stat"><div class="stat-icon">${icon('chart')}</div><div><strong>03</strong><span>主题方向</span></div></div></div><div class="toolbar"><h2>${query?'搜索结果':'项目文件夹'}<span>${list.length} 个项目</span></h2><div class="controls"><select id="kind-filter" aria-label="筛选个人或小组项目"><option value="all">全部类型</option><option value="个人项目">个人项目</option><option value="小组项目">小组项目</option></select><div class="view-toggle"><button id="grid-view" class="${view==='grid'?'selected':''}" aria-label="网格视图" aria-pressed="${view==='grid'}">${icon('grid')}</button><button id="list-view" class="${view==='list'?'selected':''}" aria-label="列表视图" aria-pressed="${view==='list'}">${icon('list')}</button></div></div></div><p class="order-note">展示顺序：毕业项目、企业咨询与科研、专业课程项目；兼顾相关性与完成时间。</p><section class="projects ${view==='list'?'list':''}" aria-label="项目文件夹">${list.length?list.map(card).join(''):`<div class="empty-state">${icon('search')}<h3>没有找到匹配的项目</h3><p>试试“ESG”“Python”或课程编号。</p><button id="reset-search">清除筛选</button></div>`}</section>`;
+ $('#main').innerHTML=`<div class="intro"><div><div class="eyebrow">${copy.eyebrow}</div><h1>${category==='全部项目'?'项目档案':category}</h1><p>${copy.lines.map(line=>esc(line)).join('<br>')}</p></div><div class="archive-stamp">COLLECTION<strong>01—${String(PROJECTS.length).padStart(2,'0')}</strong>BACHELOR & MASTER</div></div><div class="stats"><div class="stat"><div class="stat-icon">${icon('folder')}</div><div><strong>${PROJECTS.length}</strong><span>项目文件夹</span></div></div><div class="stat"><div class="stat-icon">${icon('file')}</div><div><strong>${PROJECTS.reduce((n,p)=>n+p.files.length,0)}</strong><span>原始材料</span></div></div><div class="stat"><div class="stat-icon">${icon('chart')}</div><div><strong>03</strong><span>主题方向</span></div></div></div><div class="toolbar"><h2>${query?'搜索结果':'项目文件夹'}<span>${list.length} 个项目</span></h2><div class="controls"><select id="kind-filter" aria-label="筛选个人或小组项目"><option value="all">全部类型</option><option value="个人项目">个人项目</option><option value="小组项目">小组项目</option></select><div class="view-toggle"><button id="grid-view" class="${view==='grid'?'selected':''}" aria-label="网格视图" aria-pressed="${view==='grid'}">${icon('grid')}</button><button id="list-view" class="${view==='list'?'selected':''}" aria-label="列表视图" aria-pressed="${view==='list'}">${icon('list')}</button></div></div></div><p class="order-note">展示顺序：硕士课程项目、本科毕业项目、企业咨询与科研、专业课程项目；兼顾学习阶段、相关性与完成时间。</p><section class="projects ${view==='list'?'list':''}" aria-label="项目文件夹">${list.length?list.map(card).join(''):`<div class="empty-state">${icon('search')}<h3>没有找到匹配的项目</h3><p>试试“ESG”“Python”或课程编号。</p><button id="reset-search">清除筛选</button></div>`}</section>`;
  $('#kind-filter').value=kind;$('#kind-filter').onchange=e=>{kind=e.target.value;render()};
  $('#grid-view').onclick=()=>setView('grid');$('#list-view').onclick=()=>setView('list');
  $('#main').querySelectorAll('[data-project]').forEach(b=>b.onclick=()=>{location.hash='project/'+b.dataset.project;window.scrollTo(0,0)});
@@ -67,3 +67,4 @@ $('#search').addEventListener('input',e=>{query=e.target.value;if(location.hash)
 window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('#viewer').open){e.preventDefault();$('#search').focus()}});
 render();
+
