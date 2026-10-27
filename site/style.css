@@ -54,11 +54,6 @@ button.stage:hover{background:#f0f5fa}button.stage.active{background:#e8f1fa;bor
 /* Render the original vector shield at its natural proportions. */
 .school-logo .crest-crop img{position:static;display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center;left:auto;top:auto}
 
-/* Fit landscape presentation covers without cropping any slide content. */
-.project-art.slide-cover::after{display:none}
-.project-art.slide-cover .paper-stack{position:absolute;inset:34px 22px 28px;width:auto;max-width:none;height:auto;margin:0;padding:8px;background:#fff;border:1px solid #d0dbe6;box-shadow:0 3px 14px #23426018;transform:none}
-.project:hover .project-art.slide-cover .paper-stack{transform:none}
-.project-art.slide-cover .paper-stack img{display:block;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center;border:0;box-shadow:none;background:#fff}
-.project-art.slide-cover .paper-back{z-index:-1}
-.detail-side>img.slide-cover{object-fit:contain;object-position:center;background:#fff;padding:12px}
-@media(max-width:760px){.project-art.slide-cover .paper-stack{inset:34px 14px 27px;padding:6px}}
+/* Keep the shared tilted-paper silhouette; fit the slide across its full width. */
+.project-art.slide-cover .paper-stack img{object-fit:contain;object-position:center top}
+.detail-side>img.slide-cover{object-fit:contain;object-position:center;background:#fff;padding:8px}
