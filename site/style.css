@@ -32,3 +32,6 @@ button.stage:hover{background:#f0f5fa}button.stage.active{background:#e8f1fa;bor
 .hobby-grid p{font-size:13px;line-height:1.85}
 @media(max-width:1200px){.botanical-left{left:-56px}.botanical-right{right:-56px}}
 @media(max-width:760px){.botanical-rail{top:80px}.botanical-left{left:-36px}.botanical-right{right:-36px}.hobby-grid{grid-template-columns:1fr;gap:10px}.hobby-grid article,.hobby-grid article:nth-child(2n),.hobby-grid article:last-child{padding:16px 18px;grid-column:auto}.hobby-grid h3{font-size:15px}.hobby-grid p{font-size:14px}}
+
+/* Underline interest headings. */
+.hobby-grid h3{display:inline-block;border-bottom:2px solid #aac9e3;padding-bottom:5px;margin-bottom:9px}
