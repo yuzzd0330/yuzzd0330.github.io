@@ -1,5 +1,5 @@
 // Project discovery and selected evidence, grounded in the archived materials.
-const PORTFOLIO_CONTACT = {email:'michelle_0330@163.com',resume:'assets/jingwei-liu-resume-public.pdf'};
+const PORTFOLIO_CONTACT = {email:'michelle_0330@163.com',resume:'assets/jingwei-liu-resume-public.pdf?v=bath-wording-20261027'};
 const FEATURED_IDS = ['sinopec','kangdexin','python-finance','tourism-consulting'];
 const PROJECT_META = {
  'sinopec':{teaser:'结合五年财务数据与 ESG 证据，评价中石化经营表现与转型压力。',tools:['Excel'],methods:['财务比率','同业比较','ESG 分析'],focus:'财务与 ESG 综合判断',evidence:[
