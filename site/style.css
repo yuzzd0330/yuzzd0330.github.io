@@ -89,3 +89,6 @@ html[data-language="en"] .project-methods strong{min-width:58px}
 html[data-language="en"] .viewer-header strong{overflow-wrap:anywhere}
 @media(max-width:1000px){.topbar{gap:12px}.topbar .search{min-width:0}html[data-language="en"] .top-location{display:none}}
 @media(max-width:760px){.topbar{gap:9px}.language-switch button{font-size:11px;padding:5px 7px;min-width:32px}.topbar .search{flex:1;width:auto}html[data-language="en"] .nav-item{font-size:11px}html[data-language="en"] .intro h1{font-size:25px}html[data-language="en"] .project h3{font-size:16px}html[data-language="en"] .profile-manifesto h2{font-size:25px}html[data-language="en"] .detail-title h1{font-size:23px}html[data-language="en"] .profile-heading h1{font-size:25px}html[data-language="en"] .filter-bar select{max-width:none}}
+
+/* Use Arial for the English interface; retain the Chinese and decorative typefaces. */
+html[data-language="en"] body{font-family:Arial,Helvetica,sans-serif}
