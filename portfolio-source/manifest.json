@@ -1,0 +1,328 @@
+{
+  "sha256": "44292d33809d8d7eacbff0e21b01b01fd0e067a5a5963962093010a2125a0cf9",
+  "bytes": 106206939,
+  "segments": [
+    {
+      "kind": "residual",
+      "offset": 0,
+      "length": 27692612
+    },
+    {
+      "kind": "asset",
+      "length": 839386,
+      "source": "site/assets/surf-1.jpg",
+      "level": 8,
+      "sha256": "fe432bd2176a346c043b81b7a7a9f02f272d7f383c32dfa73c65cf316cb86b8d"
+    },
+    {
+      "kind": "residual",
+      "offset": 27692612,
+      "length": 193
+    },
+    {
+      "kind": "asset",
+      "length": 20058,
+      "source": "site/assets/surf-2.xlsx",
+      "level": 8,
+      "sha256": "916c61ba4bb2c9f043ce3070233ee97642c7944975ba06804102f20e65c099cf"
+    },
+    {
+      "kind": "residual",
+      "offset": 27692805,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 268037,
+      "source": "site/assets/surf-3.pdf",
+      "level": 8,
+      "sha256": "291f7c173354a76133f330a81ede223ab5fddd72cdd5c44d3f8a6c1345b1b03d"
+    },
+    {
+      "kind": "residual",
+      "offset": 27693001,
+      "length": 193
+    },
+    {
+      "kind": "asset",
+      "length": 29594,
+      "source": "site/assets/surf-4.xlsx",
+      "level": 8,
+      "sha256": "0346777e69273685914065c2ee61f9d22f4e1aca24f7af24d6fef323f492e0ef"
+    },
+    {
+      "kind": "residual",
+      "offset": 27693194,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 434803,
+      "source": "site/assets/surf-5.pdf",
+      "level": 8,
+      "sha256": "0063f67b52d0286071889b1570707508623e388b87f6ab0d08e41592ed55e26b"
+    },
+    {
+      "kind": "residual",
+      "offset": 27693390,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 111027,
+      "source": "site/assets/surf-6.xlsx",
+      "level": 8,
+      "sha256": "031aeeb2643f9ffed93fbdbb55a2471829ae64524939243d9726bda68c2d7816"
+    },
+    {
+      "kind": "residual",
+      "offset": 27693586,
+      "length": 202
+    },
+    {
+      "kind": "asset",
+      "length": 17555931,
+      "source": "site/assets/xinyan-1.pptx",
+      "level": 9,
+      "sha256": "2a892937b46a7ba98b1c136131133c73e8620cb87469e6d721c2206b9168c227"
+    },
+    {
+      "kind": "residual",
+      "offset": 27693788,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 631434,
+      "source": "site/assets/kangdexin-1.docx",
+      "level": 8,
+      "sha256": "6a7580b5163c5bfc43584bd0c046c73da24d8ff9cdfdcd671f8077400cf7fe91"
+    },
+    {
+      "kind": "residual",
+      "offset": 27693984,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 9401665,
+      "source": [
+        "site/assets/bmt5100-cxmt.part00",
+        "site/assets/bmt5100-cxmt.part01",
+        "site/assets/bmt5100-cxmt.part02",
+        "site/assets/bmt5100-cxmt.part03",
+        "site/assets/bmt5100-cxmt.part04",
+        "site/assets/bmt5100-cxmt.part05",
+        "site/assets/bmt5100-cxmt.part06",
+        "site/assets/bmt5100-cxmt.part07",
+        "site/assets/bmt5100-cxmt.part08",
+        "site/assets/bmt5100-cxmt.part09",
+        "site/assets/bmt5100-cxmt.part10",
+        "site/assets/bmt5100-cxmt.part11",
+        "site/assets/bmt5100-cxmt.part12",
+        "site/assets/bmt5100-cxmt.part13",
+        "site/assets/bmt5100-cxmt.part14",
+        "site/assets/bmt5100-cxmt.part15",
+        "site/assets/bmt5100-cxmt.part16",
+        "site/assets/bmt5100-cxmt.part17",
+        "site/assets/bmt5100-cxmt.part18",
+        "site/assets/bmt5100-cxmt.part19",
+        "site/assets/bmt5100-cxmt.part20",
+        "site/assets/bmt5100-cxmt.part21",
+        "site/assets/bmt5100-cxmt.part22"
+      ],
+      "level": 9,
+      "sha256": "f80093d15c0cbe1d5b264927ebf4908549017d95c78ef05cb5daa842fc0c019a"
+    },
+    {
+      "kind": "residual",
+      "offset": 27694183,
+      "length": 193
+    },
+    {
+      "kind": "asset",
+      "length": 49476,
+      "source": "site/assets/greentech-1.docx",
+      "level": 8,
+      "sha256": "3c4917ac5fbb3b8d3329945ec442d122b02d59e4bcb6c90643fd87b55900732c"
+    },
+    {
+      "kind": "residual",
+      "offset": 27694376,
+      "length": 193
+    },
+    {
+      "kind": "asset",
+      "length": 72860,
+      "source": "site/assets/digital-audit-1.docx",
+      "level": 8,
+      "sha256": "d8fe62d07d51eac066ee907d3bdcd868252711b9b93268f87aa56b1036c2c087"
+    },
+    {
+      "kind": "residual",
+      "offset": 27694569,
+      "length": 202
+    },
+    {
+      "kind": "asset",
+      "length": 30148415,
+      "source": [
+        "site/assets/hollywood-1.part0",
+        "site/assets/hollywood-1.part1",
+        "site/assets/hollywood-1.part2",
+        "site/assets/hollywood-1.part3"
+      ],
+      "level": 9,
+      "sha256": "34dbbb35f601259b0ef620234750399efaf119e02fa1e2800cf1bd576858e53d"
+    },
+    {
+      "kind": "residual",
+      "offset": 27694771,
+      "length": 193
+    },
+    {
+      "kind": "asset",
+      "length": 27003,
+      "source": "site/assets/hollywood-2.docx",
+      "level": 8,
+      "sha256": "60baf00485fc84c0dd396d2fcd7d02ccbb2f0c746c1c4204e94c97e90eeb3c26"
+    },
+    {
+      "kind": "residual",
+      "offset": 27694964,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 1794323,
+      "source": "site/assets/sinopec-1.docx",
+      "level": 9,
+      "sha256": "62ad999bccbe2be44c938f284ee9a4cef3337a34e6cf1b0a581c4e56b09f21bb"
+    },
+    {
+      "kind": "residual",
+      "offset": 27695163,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 2794310,
+      "source": "site/assets/sinopec-2.xlsx",
+      "level": 9,
+      "sha256": "042ca1d2cf5854260447e494b7f0a3da732758396bc9a0293e6bae6759e38974"
+    },
+    {
+      "kind": "residual",
+      "offset": 27695362,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 627768,
+      "source": "site/assets/tourism-consulting-1.pdf",
+      "level": 9,
+      "sha256": "e5c19e796e699ff56a685a4a302ec1cf44b93b27c01473602036dcad1f0f37ad"
+    },
+    {
+      "kind": "residual",
+      "offset": 27695558,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 3321330,
+      "source": "site/assets/tourism-consulting-2.pdf",
+      "level": 9,
+      "sha256": "1d3e52351c458000914a6d0ee00bee7f4e1ed87c8c8d04e98fd57839cc4b792f"
+    },
+    {
+      "kind": "residual",
+      "offset": 27695757,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 1752461,
+      "source": "site/assets/auto-esg-1.docx",
+      "level": 8,
+      "sha256": "59bd57d01e8982d08c14ac5d1db90ee20b4fd3a5978f3b6cd55bc69779aa7c23"
+    },
+    {
+      "kind": "residual",
+      "offset": 27695956,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 280670,
+      "source": "site/assets/huazhu-1.docx",
+      "level": 8,
+      "sha256": "2107eb5a4c49af064bc32ce4898ad41665e756ada0fe442b30ec562eabbfa548"
+    },
+    {
+      "kind": "residual",
+      "offset": 27696152,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 5763305,
+      "source": "site/assets/capital-capacity-1.pdf",
+      "level": 9,
+      "sha256": "37d5cf9c272a01982a95747f754665a02b2bc2960569b9765622896a61f522b6"
+    },
+    {
+      "kind": "residual",
+      "offset": 27696351,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 284335,
+      "source": "site/assets/hilton-lotus-1.pdf",
+      "level": 9,
+      "sha256": "97071c724422eda37b0688b62027c7b7112412415327db3ce39a0d72c311db7c"
+    },
+    {
+      "kind": "residual",
+      "offset": 27696547,
+      "length": 196
+    },
+    {
+      "kind": "asset",
+      "length": 136172,
+      "source": "site/assets/python-finance-1.ipynb",
+      "level": 9,
+      "sha256": "8c78d87b948d15e99777e8fb7c1998d588e80f076af6d4a6cd95aa38eff54cdc"
+    },
+    {
+      "kind": "residual",
+      "offset": 27696743,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 1203039,
+      "source": "site/assets/bibliometric-1.docx",
+      "level": 8,
+      "sha256": "b94c368c51d48408fa44853ec28e51cdd5b0807ec1d0c69e2a55313a26fdfaf4"
+    },
+    {
+      "kind": "residual",
+      "offset": 27696942,
+      "length": 199
+    },
+    {
+      "kind": "asset",
+      "length": 942196,
+      "source": "site/assets/bibliometric-2.csv",
+      "level": 9,
+      "sha256": "956071dc61802ad488f6aeee416f040324caab3c03ac400b4558b97ffecac023"
+    },
+    {
+      "kind": "residual",
+      "offset": 27697141,
+      "length": 20200
+    }
+  ]
+}
