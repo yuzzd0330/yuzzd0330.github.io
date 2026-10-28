@@ -26,7 +26,7 @@ function renderNav(){
  $('#categories').innerHTML=CATEGORIES.map((c,i)=>`<button class="nav-item ${category===c&&location.hash!=='#about'?'active':''}" data-category="${c}" ${category===c?'aria-current="page"':''}>${icon(CAT_ICONS[i])}<span>${c}</span><span class="count">${c==='全部项目'?PROJECTS.length:PROJECTS.filter(p=>p.category===c).length}</span></button>`).join('');
  $('#categories').querySelectorAll('button').forEach(b=>b.onclick=()=>{category=b.dataset.category;if(category==='全部项目'){stage='all';tool='all';method='all';kind='all';}query='';$('#search').value='';if(location.hash)location.hash='';else render();renderNav()});
 }
-function matches(p){const m=projectMeta(p);return(tool==='all'||m.tools.includes(tool))&&(method==='all'||m.methods.includes(method))&&(stage==='all'||projectStage(p)===stage)&&(category==='全部项目'||p.category===category)&&(kind==='all'||p.kind===kind)&&(!query||[p.title,p.en,p.course,p.summary,p.role,...m.tools,...m.methods,...p.topics,...p.files.map(f=>f.source)].join(' ').toLowerCase().includes(query.toLowerCase()))}
+function matches(p){const m=projectMeta(p);return(tool==='all'||m.tools.includes(tool))&&(method==='all'||m.methods.includes(method))&&(stage==='all'||projectStage(p)===stage)&&(category==='全部项目'||p.category===category)&&(kind==='all'||p.kind===kind)&&(!query||[p.title,p.en,p.course,p.summary,p.role,...m.tools,...m.methods,...p.topics,...p.files.map(f=>f.source),...(typeof portfolioEnglishSearch==='function'?[portfolioEnglishSearch(p)]:[])].join(' ').toLowerCase().includes(query.toLowerCase()))}
 function fitCoverImages(){
  document.querySelectorAll('.project-art img, .detail-side > img').forEach(img=>{
   const fit=()=>{const target=img.closest('.project-art')||img;target.classList.toggle('slide-cover',img.naturalWidth>img.naturalHeight*1.15)};
@@ -90,4 +90,5 @@ $('#search').addEventListener('input',e=>{query=e.target.value;if(location.hash)
 window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('#viewer').open){e.preventDefault();$('#search').focus()}});
 render();
+
 

@@ -57,3 +57,35 @@ button.stage:hover{background:#f0f5fa}button.stage.active{background:#e8f1fa;bor
 /* Keep the shared tilted-paper silhouette; fit the slide across its full width. */
 .project-art.slide-cover .paper-stack img{object-fit:contain;object-position:center top}
 .detail-side>img.slide-cover{object-fit:contain;object-position:center;background:#fff;padding:8px}
+
+/* Language controls share the existing portfolio styling. */
+.language-switch{display:flex;align-items:center;gap:2px;flex-shrink:0;padding:3px;border:1px solid #cdddeb;border-radius:6px;background:#fff}
+.language-switch button{padding:5px 9px;font-size:12px;line-height:1.5;border-radius:4px;color:#57758f;min-width:37px}
+.language-switch button[aria-pressed="true"]{background:#315f86;color:#fff}
+.topbar .search{margin-left:auto}
+html[data-language="en"] .side-label>span{display:none}
+html[data-language="en"] .nav-item{font-size:12px;line-height:1.55}
+html[data-language="en"] .nav-item>span:not(.count){min-width:0;flex:1}
+html[data-language="en"] .stage-label{font-size:12px;line-height:1.5}
+html[data-language="en"] .stage small{font-size:9px;line-height:1.6}
+html[data-language="en"] .intro h1{font-size:29px;line-height:1.4;letter-spacing:0}
+html[data-language="en"] .intro p{max-width:740px;line-height:1.8}
+html[data-language="en"] .project h3{font-size:16px;line-height:1.5;overflow-wrap:anywhere}
+html[data-language="en"] .project-desc{line-height:1.75}
+html[data-language="en"] .detail-title h1{font-size:27px;line-height:1.4}
+html[data-language="en"] .profile-heading h1{font-size:30px;letter-spacing:0}
+html[data-language="en"] .profile-manifesto h2{font-size:30px;line-height:1.5;letter-spacing:0}
+html[data-language="en"] .profile-manifesto p,html[data-language="en"] .working-style p,html[data-language="en"] .interest-lines p{line-height:1.85}
+html[data-language="en"] .profile-degree{line-height:1.75}
+html[data-language="en"] .education-date{white-space:normal}
+html[data-language="en"] .school-header .education-date span{max-width:180px;line-height:1.6}
+html[data-language="en"] .filter-bar select{max-width:230px}
+html[data-language="en"] .contact-actions{gap:8px}
+html[data-language="en"] .contact-actions a{flex-wrap:wrap;gap:6px 9px}
+html[data-language="en"] .profile-hero .contact-actions a{font-size:11px}
+html[data-language="en"] .meta-row{flex-wrap:wrap}
+html[data-language="en"] .meta-row strong{overflow-wrap:anywhere}
+html[data-language="en"] .project-methods strong{min-width:58px}
+html[data-language="en"] .viewer-header strong{overflow-wrap:anywhere}
+@media(max-width:1000px){.topbar{gap:12px}.topbar .search{min-width:0}html[data-language="en"] .top-location{display:none}}
+@media(max-width:760px){.topbar{gap:9px}.language-switch button{font-size:11px;padding:5px 7px;min-width:32px}.topbar .search{flex:1;width:auto}html[data-language="en"] .nav-item{font-size:11px}html[data-language="en"] .intro h1{font-size:25px}html[data-language="en"] .project h3{font-size:16px}html[data-language="en"] .profile-manifesto h2{font-size:25px}html[data-language="en"] .detail-title h1{font-size:23px}html[data-language="en"] .profile-heading h1{font-size:25px}html[data-language="en"] .filter-bar select{max-width:none}}
