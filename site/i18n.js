@@ -78,6 +78,8 @@ const PORTFOLIO_PROJECT_EN = {
 "story":[["Tracing operating risk through inventory measurement","The team connected DRAM pricing cycles, technological change and manufacturing costs with inventory cost and net realisable value. It explained the financial statement effects of impairment and distinguished allowance reversals from allowance utilisation when inventory is sold."],["Separating evidence of improvement from remaining uncertainty","In my investor evaluation section, I considered annual impairment losses, closing allowance ratios, inventory scale and the work-in-progress share to assess the economic basis for easing pressure. I distinguished cyclical price recovery from improvements in costs, efficiency and product mix."],["A conditional investor assessment","The presentation reaches a cautiously optimistic view of inventory risk while retaining attention to prices, costs, technology and management estimates. A key follow-up question is whether lower unit costs and an improved product mix would persist when DRAM prices weaken. This is an inventory risk assessment, not a trading recommendation."]]}
 }
 ;
+Object.assign(PORTFOLIO_DICTIONARY, APPLE_TRANSLATIONS);
+PORTFOLIO_PROJECT_EN[APPLE_PROJECT.id] = APPLE_PROJECT_EN;
 const languageParameter = new URLSearchParams(location.search).get('lang');
 let portfolioLanguage = 'zh';
 try { portfolioLanguage = languageParameter === 'en' || languageParameter === 'zh' ? languageParameter : localStorage.getItem('portfolioLanguage') === 'en' ? 'en' : 'zh'; } catch { portfolioLanguage = languageParameter === 'en' ? 'en' : 'zh'; }
@@ -145,3 +147,4 @@ function setPortfolioLanguage(language) {
 languageSwitch.querySelectorAll('button').forEach(b=>b.onclick=()=>setPortfolioLanguage(b.dataset.language));
 translationObserver=new MutationObserver(()=>applyPortfolioLanguage());
 applyPortfolioLanguage();
+
