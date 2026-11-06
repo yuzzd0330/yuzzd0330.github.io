@@ -29,6 +29,8 @@ jobs:
           git push
       - name: Assemble complete portfolio PDF
         run: python3 scripts/assemble_portfolio.py
+      - name: Prepare Walmart project materials
+        run: python3 scripts/assemble_walmart.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website
@@ -38,3 +40,4 @@ jobs:
       - name: Publish website
         id: deployment
         uses: actions/deploy-pages@v4
+

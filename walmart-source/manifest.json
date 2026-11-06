@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "output": "site/assets/walmart-weekly-sales.pdf",
+      "bytes": 9531983,
+      "sha256": "0b16a40d7857c3585cbd9f62aa896789041f1d8569e2d86852b9108b7d6426ee",
+      "parts": [
+        "walmart-source/walmart-weekly-sales.pdf.part00",
+        "walmart-source/walmart-weekly-sales.pdf.part01",
+        "walmart-source/walmart-weekly-sales.pdf.part02",
+        "walmart-source/walmart-weekly-sales.pdf.part03",
+        "walmart-source/walmart-weekly-sales.pdf.part04",
+        "walmart-source/walmart-weekly-sales.pdf.part05",
+        "walmart-source/walmart-weekly-sales.pdf.part06",
+        "walmart-source/walmart-weekly-sales.pdf.part07",
+        "walmart-source/walmart-weekly-sales.pdf.part08",
+        "walmart-source/walmart-weekly-sales.pdf.part09",
+        "walmart-source/walmart-weekly-sales.pdf.part10",
+        "walmart-source/walmart-weekly-sales.pdf.part11",
+        "walmart-source/walmart-weekly-sales.pdf.part12",
+        "walmart-source/walmart-weekly-sales.pdf.part13",
+        "walmart-source/walmart-weekly-sales.pdf.part14",
+        "walmart-source/walmart-weekly-sales.pdf.part15",
+        "walmart-source/walmart-weekly-sales.pdf.part16",
+        "walmart-source/walmart-weekly-sales.pdf.part17",
+        "walmart-source/walmart-weekly-sales.pdf.part18",
+        "walmart-source/walmart-weekly-sales.pdf.part19",
+        "walmart-source/walmart-weekly-sales.pdf.part20",
+        "walmart-source/walmart-weekly-sales.pdf.part21"
+      ]
+    }
+  ]
+}
