@@ -11,7 +11,24 @@ const fashionLedger = {
   thumb: 'assets/fashion-ledger-inventory.jpg',
   page: 2,
   topics: ['存货周转', '财务报表分析', 'Excel'],
-  files: [],
+  files: [
+    {
+      source: 'M4_Inventory_Efficiency_Analysis.docx',
+      label: '个人分析底稿 · 校正版',
+      id: 'bmt5100-fashion-ledger-word',
+      ext: 'DOCX',
+      bytes: 208090,
+      url: 'assets/m4-inventory-analysis.docx'
+    },
+    {
+      source: 'M4_Inventory_Efficiency_Calculations_Revised.xlsx',
+      label: '个人五年测算表 · Excel',
+      id: 'bmt5100-fashion-ledger-excel',
+      ext: 'XLSX',
+      bytes: 19838,
+      url: 'assets/m4-inventory-calculations.xlsx'
+    }
+  ],
   story: [
     {
       heading: 'FY2022，迅销的存货为什么周转变慢？',
@@ -57,7 +74,9 @@ Object.assign(PORTFOLIO_DICTIONARY, {
   '财务报表分析': 'Financial statement analysis',
   '财务比率分析': 'Financial ratio analysis',
   '同业比较': 'Peer comparison',
-  '项目介绍': 'Project overview'
+  '项目介绍': 'Project overview',
+  '个人分析底稿 · 校正版': 'Individual analysis · corrected version',
+  '个人五年测算表 · Excel': 'Individual five-year calculation workbook · Excel'
 });
 fashionLedger.story.forEach(({heading, body}, i) => {
   PORTFOLIO_DICTIONARY[heading] = fashionLedgerEnglish.story[i][0];
