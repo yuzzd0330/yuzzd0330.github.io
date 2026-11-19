@@ -11,7 +11,17 @@ const fashionLedger = {
   thumb: 'assets/fashion-ledger-inventory.jpg',
   page: 2,
   topics: ['存货周转', '财务报表分析', 'Excel'],
-  files: [
+    files: [
+    {
+      source: 'Inditex_Magazine_Compressed.pdf',
+      label: '小组完整杂志 · The Fashion Ledger',
+      id: 'bmt5100-fashion-ledger-magazine',
+      ext: 'PDF',
+      bytes: 10488814,
+      url: 'assets/fashion-ledger-magazine.pdf',
+      preview: 'assets/fashion-ledger-magazine.pdf',
+      previewType: 'pdf'
+    },
     {
       source: 'M4_Inventory_Efficiency_Analysis.docx',
       label: '个人分析底稿 · 校正版',
@@ -64,6 +74,8 @@ const fashionLedgerMeta = {
 PROJECT_META[fashionLedger.id] = fashionLedgerMeta;
 PORTFOLIO_PROJECT_EN[fashionLedger.id] = fashionLedgerEnglish;
 Object.assign(PORTFOLIO_DICTIONARY, {
+  '小组完整杂志 · The Fashion Ledger': 'Full group magazine · The Fashion Ledger',
+  '下载小组完整杂志 · The Fashion Ledger': 'Download full group magazine · The Fashion Ledger',
   [fashionLedger.title]: fashionLedgerEnglish.title,
   ['打开项目：' + fashionLedger.title]: 'Open project: ' + fashionLedgerEnglish.title,
   [fashionLedger.title + '材料节选']: 'Inventory efficiency project cover',
